@@ -10,7 +10,7 @@ ARG IMAGE_VERSION=v1.4.0
 ###############################################################
 FROM opensource/${VENDOR}/${IMAGE_NAME}:${IMAGE_VERSION} AS build
 
-FROM nexus-docker-secure.levelup-dev.io/redhat/ubi/ubi8:8.1
+FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
 LABEL name="Mattermost Operator" \
   maintainer="dev-ops@mattermost.com" \
