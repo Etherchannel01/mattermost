@@ -8,7 +8,7 @@ ARG VENDOR=mattermost
 ARG IMAGE_NAME=mattermost-operator
 ARG IMAGE_VERSION=v1.4.0
 ###############################################################
-FROM opensource/${VENDOR}/${IMAGE_NAME}/${IMAGE_NAME}:${IMAGE_VERSION} AS build
+FROM opensource/${VENDOR}/${IMAGE_NAME}:${IMAGE_VERSION} AS build
 
 FROM nexus-docker-secure.levelup-dev.io/redhat/ubi/ubi8:8.1
 
