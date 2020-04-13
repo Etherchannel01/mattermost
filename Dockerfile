@@ -13,7 +13,7 @@ FROM opensource/${VENDOR}/${IMAGE_NAME}:${IMAGE_VERSION} AS build
 FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
 LABEL name="Mattermost Operator" \
-  maintainer="dev-ops@mattermost.com" \
+  maintainer="gavin.scallon@parsons.com" \
   vendor="Mattermost" \
   io.k8s.description="Mattermost Operator creates, configures and helps manage Mattermost installations on Kubernetes" \
   io.k8s.display-name="Mattermost Operator" \
