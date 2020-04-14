@@ -1,5 +1,7 @@
 # Mattermost Operator
 
+These instructions are a work-in-progress, as we work on getting the links to the images referenced below public.
+
 Refer to this guide in order to learn how to set up Mattermost with Kubernetes:
 https://docs.mattermost.com/install/install-kubernetes.html
 
