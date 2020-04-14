@@ -25,13 +25,8 @@ ENV OPERATOR=/usr/local/bin/mattermost-operator \
     USER_UID=1001 \
     USER_NAME=mattermost-operator
 
-COPY --from=build /usr/local/bin/* /usr/local/bin/
+COPY --from=build /usr/local/bin/mattermost-operator /usr/local/bin/mattermost-operator
 
-RUN mkdir -p ${HOME} && \
-    chown ${USER_UID}:0 ${HOME} && \
-    chmod ug+rwx ${HOME} && \
-    chmod g+rw /etc/passwd
-
-ENTRYPOINT ["/usr/local/bin/entrypoint"]
+ENTRYPOINT ["/usr/local/bin/mattermost-operator"]
 
 USER ${USER_UID}
