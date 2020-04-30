@@ -2,7 +2,7 @@
 # Default registry variables
 ARG BASE_REGISTRY=nexus-docker-secure.levelup-nexus.svc.cluster.local:18082
 ARG BASE_IMAGE=redhat/ubi/ubi8
-ARG BASE_TAG=8.1
+ARG BASE_TAG=8.2
 ###############################################################
 ARG VENDOR=mattermost
 ARG IMAGE_NAME=mattermost-operator
