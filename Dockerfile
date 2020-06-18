@@ -1,25 +1,17 @@
-###############################################################
-# Default registry variables
-ARG BASE_REGISTRY=registry.access.redhat.com
-ARG BASE_IMAGE=ubi8/ubi
+ARG BASE_REGISTRY=nexus-docker-secure.levelup-dev.io
+ARG BASE_IMAGE=ubi8
 ARG BASE_TAG=8.2
-###############################################################
-ARG VENDOR=mattermost
-ARG IMAGE_NAME=mattermost-operator
-ARG IMAGE_VERSION=v1.4.0
-###############################################################
-FROM opensource/${VENDOR}/${IMAGE_NAME}:${IMAGE_VERSION} AS build
+
+FROM mattermost/mattermost-operator:v1.5.0 AS build
 
 FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
-LABEL name="Mattermost Operator" \
-  maintainer="gavin.scallon@parsons.com" \
-  vendor="Mattermost" \
-  io.k8s.description="Mattermost Operator creates, configures and helps manage Mattermost installations on Kubernetes" \
-  io.k8s.display-name="Mattermost Operator" \
-  io.openshift.tags="mattermost,collaboration,operator" \
-  summary="Quick and easy Mattermost setup" \
-  description="Mattermost operator deploys and configures Mattermost installations, and assists with maintenance/upgrade operations."
+LABEL org.opencontainers.image.title="mattermost-operator" \
+      org.opencontainers.image.description="Mattermost Operator creates, configures and helps manage Mattermost installations on Kubernetes." \
+      org.opencontainers.image.licenses="Apache-2.0" \
+      org.opencontainers.image.url="https://github.com/mattermost/mattermost-operator" \
+      org.opencontainers.image.version="v1.5.0" \
+      maintainer="cht@dsop.io"
 
 ENV OPERATOR=/usr/local/bin/mattermost-operator \
     USER_UID=1001 \

@@ -1,0 +1,22 @@
+{
+  "assignees": ["@gavin.scallon"],
+  "baseBranches": ["development"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "version=\"(?<currentValue>.*?)\""
+      ],
+      "depNameTemplate": "mattermost/mattermost-operator",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["^Jenkinsfile$"],
+      "matchStrings": [
+        "version:\\s+\"(?<currentValue>.*?)\""
+      ],
+      "depNameTemplate": "mattermost/mattermost-operator",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
