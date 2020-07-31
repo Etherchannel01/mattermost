@@ -1,3 +1,3 @@
 resources:
-  - url: "docker://docker.io/mattermost/mattermost-operator@sha256:fcea3ed028e2c943e452edfa0040b5ecf770fee99bc2f558506edcae3ca4f54a"
-    tag: "mattermost/mattermost-operator:v1.6.0"
+  - url: "docker://docker.io/mattermost/mattermost-operator@sha256:b10fb94c765ab288c34633ebbfbc20ad47525e54b4a7d023479a1d564944f888"
+    tag: "mattermost/mattermost-operator:v1.6.1"
